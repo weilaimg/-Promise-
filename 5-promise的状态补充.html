@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 如果promise的状态不改变,then里的方法不会执行
+        const p = new Promise((resolve,reject)=>{
+           resolve('123')
+        // qwe(123)
+        })
+        console.dir(p)
+        const t = p.then((value) => {
+            console.log('成功')
+
+            // 使用return就可以将t的状态改为fulfilled
+            // return 123
+
+            // 若这里的函数出错,直接rejected
+            
+        },(reason) => {
+            console.log('失败',reason)
+        })
+
+        t.then((value) => {
+            console.log('成功2',value)
+        },(reason) => {
+            console.log('失败',reason)
+        })
+
+
+    </script>
+</body>
+</html>

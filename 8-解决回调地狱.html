@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <script>
+        $.ajax({
+            type:'GET',
+            url:'./data1.json',
+            success: function(res){
+                console.log(res)
+            }
+        })
+
+        new Promise((resolve,reject)=>{
+            
+        })
+    </script>
+    
+</body>
+</html>

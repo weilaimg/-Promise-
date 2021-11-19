@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const p = new Promise((resolve,reject)=>{
+            // r若不使用resolve,reject，promise的状态为pending
+            // 使用resolve()使promise的状态变为fulfilled
+            // 使用reject()使promise的状态变为rejected
+            // promise的状态只能改变一次,要么成功,要么失败
+            reject()
+        })
+
+        console.dir(p)
+    </script>
+
+
+
+</body>
+</html>

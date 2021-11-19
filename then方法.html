@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const p = new Promise((resolve,reject)=>{
+            // 通过调用resolve,传递参数,改变当前promiser对象的result
+            resolve('成功的结果123')
+            // reject('失败的结果')
+        })
+
+        // then方法函数
+        // 参数
+        // 1.是一个函数
+        // 2.还是一个函数
+        // 返回值:是一个promise对象,且状态是pending
+        const t = p.then((value)=>{
+            // 当promise的状态是fulfilled时,执行
+            console.log('成功时调用',value)
+        },(reason)=>{
+            // 当promise的状态是rejected时,执行
+            console.log('失败时调用',reason)
+        })
+
+        // 链式操作
+        console.dir(t)
+    </script>
+</body>
+</html>
